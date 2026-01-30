@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rate Limiter Service - Production-Ready API Rate Limiting</title>
+    <title>@prakarsh/rate-limiter - Production-Ready API Rate Limiting</title>
     <meta
       name="description"
-      content="Production-ready API Rate Limiting & Quota Management Service with multiple algorithms, Redis-backed storage, and REST/gRPC interfaces."
+      content="Install and use production-ready rate limiting in 30 seconds. No deployment needed - just npm install!"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -27,37 +27,37 @@
             height="32"
             viewBox="0 0 32 32"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M16 2L4 8V14C4 21.18 8.84 27.62 16 29C23.16 27.62 28 21.18 28 14V8L16 2Z"
-              fill="#00FF88"
-              stroke="#00FF88"
-              stroke-width="2"
-            />
-            <path
-              d="M16 12V20M12 16H20"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
+            <rect width="32" height="32" rx="8" fill="#0066FF" />
+            <path d="M16 8L12 12H20L16 8Z" fill="white" />
+            <rect x="14" y="12" width="4" height="12" fill="white" />
           </svg>
-          <span class="brand-name">Rate Limiter Service</span>
+          <span class="brand-name">@prakarsh/rate-limiter</span>
+          <span class="npm-badge">npm</span>
         </div>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
         <ul class="nav-links">
           <li><a href="#features">Features</a></li>
-          <li><a href="#algorithms">Algorithms</a></li>
-          <li><a href="#integration">Integration</a></li>
-          <li><a href="docs/api-reference.html">API Reference</a></li>
+          <li><a href="#install">Install</a></li>
+          <li><a href="#usage">Usage</a></li>
+          <li><a href="#examples">Examples</a></li>
           <li>
-            <a href="docs/getting-started.html" class="btn-secondary"
-              >Get Started</a
+            <a
+              href="https://github.com/PrakarshSingh5/rate-limiter-service"
+              class="btn-github"
+              target="_blank"
             >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
           </li>
         </ul>
       </div>
@@ -67,31 +67,195 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1 class="hero-title">Production-Ready API <span>Rate Limiting</span></h1>
-          <p class="hero-subtitle">
-            Protect your APIs with enterprise-grade rate limiting. Multiple
-            algorithms, Redis-backed storage, and seamless integration.
-          </p>
-          <div class="hero-buttons">
-            <a href="docs/getting-started.html" class="btn-primary"
-              >Get Started</a
+          <div class="hero-badge">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
             >
-            <a href="#integration" class="btn-secondary"
-              >View Integration Guide</a
-            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            Production Ready • TypeScript • Open Source
           </div>
+          <h1 class="hero-title">
+            Enterprise-Grade<br />
+            Rate Limiting in<br />
+            <span class="gradient-text">3 Lines of Code</span>
+          </h1>
+          <p class="hero-subtitle">
+            Protect your APIs with intelligent rate limiting. <strong>Token Bucket</strong>, <strong>Sliding Window</strong>, and <strong>Fixed Window</strong> algorithms—all in one powerful npm package. Redis-backed, distributed, and production-ready.
+          </p>
+
+          <div class="hero-install">
+            <div class="install-box">
+              <code>npm install @prakarsh/rate-limiter</code>
+              <button
+                class="copy-btn-hero"
+                data-copy="npm install @prakarsh/rate-limiter"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#install" class="btn-primary">Get Started</a>
+            <a href="#examples" class="btn-secondary">View Examples</a>
+          </div>
+
           <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">30s</div>
+              <div class="stat-label">Setup Time</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">4</div>
+              <div class="stat-label">Usage Patterns</div>
+            </div>
             <div class="stat">
               <div class="stat-number">3</div>
               <div class="stat-label">Algorithms</div>
             </div>
-            <div class="stat">
-              <div class="stat-number">2</div>
-              <div class="stat-label">API Types</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+      <div class="container">
+        <h2 class="section-title">Why Developers Love It</h2>
+        <p class="section-subtitle">
+          Everything you need for production-grade rate limiting
+        </p>
+
+        <div class="comparison-grid">
+          <div class="comparison-card old">
+            <div class="comparison-header">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+              </svg>
+              <h3>Lightning Fast Setup</h3>
             </div>
-            <div class="stat">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Open Source</div>
+            <ul class="comparison-list">
+              <li>✅ One command installation</li>
+              <li>✅ Import and use immediately</li>
+              <li>✅ No configuration required</li>
+              <li>✅ Works out of the box</li>
+            </ul>
+            <div class="comparison-time">⚡ 30 seconds to production</div>
+          </div>
+
+          <div class="comparison-card new">
+            <div class="comparison-header">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <h3>Production Battle-Tested</h3>
+            </div>
+            <ul class="comparison-list">
+              <li>✅ Redis-backed distributed state</li>
+              <li>✅ Atomic operations via Lua</li>
+              <li>✅ Full TypeScript support</li>
+              <li>✅ Comprehensive error handling</li>
+            </ul>
+            <div class="comparison-time">🚀 Enterprise-ready</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="install" class="installation">
+      <div class="container">
+        <h2 class="section-title">Quick Installation</h2>
+        <p class="section-subtitle">Get started in seconds</p>
+
+        <div class="install-steps">
+          <div class="install-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Install the Package</h3>
+              <div class="code-block">
+                <button
+                  class="copy-btn"
+                  data-copy="npm install @prakarsh/rate-limiter"
+                >
+                  Copy
+                </button>
+                <pre><code>npm install @prakarsh/rate-limiter</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="install-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Import and Use</h3>
+              <div class="code-block">
+                <button
+                  class="copy-btn"
+                  data-copy="import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+
+app.use(createExpressMiddleware({
+  limit: 100,
+  window: 3600,
+  keyExtractor: (req) => req.user?.id || req.ip,
+}));"
+                >
+                  Copy
+                </button>
+                <pre><code>import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+
+app.use(createExpressMiddleware({
+  limit: 100,
+  window: 3600,
+  keyExtractor: (req) => req.user?.id || req.ip,
+}));</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="install-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>You're Done! 🎉</h3>
+              <p>
+                Your API is now protected with production-ready rate limiting.
+              </p>
             </div>
           </div>
         </div>
@@ -101,19 +265,39 @@
     <!-- Features Section -->
     <section id="features" class="features">
       <div class="container">
-        <h2 class="section-title">Key Features</h2>
-        <p class="section-subtitle">
-          Everything you need for robust API rate limiting
-        </p>
+        <h2 class="section-title">Everything You Need</h2>
+        <p class="section-subtitle">Production-ready features out of the box</p>
+
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
               <svg
-                width="48"
-                height="48"
+                width="32"
+                height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#00FF88"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>4 Usage Patterns</h3>
+            <p>
+              Express middleware, Fastify plugin, direct client, or standalone
+              CLI
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
                 stroke-width="2"
               >
                 <path
@@ -121,550 +305,586 @@
                 />
               </svg>
             </div>
-            <h3 class="feature-title">Multiple Algorithms</h3>
-            <p class="feature-description">
-              Choose from Token Bucket, Fixed Window, or Sliding Window
-              algorithms based on your use case.
-            </p>
+            <h3>3 Algorithms</h3>
+            <p>Token Bucket, Fixed Window, Sliding Window—choose what fits</p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">
               <svg
-                width="48"
-                height="48"
+                width="32"
+                height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#00FF88"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6V12L16 14" />
-              </svg>
-            </div>
-            <h3 class="feature-title">Redis-Backed</h3>
-            <p class="feature-description">
-              Distributed rate limiting with Redis for high performance and
-              scalability across multiple instances.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#00FF88"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M3 9H21M9 21V9" />
-              </svg>
-            </div>
-            <h3 class="feature-title">REST & gRPC APIs</h3>
-            <p class="feature-description">
-              Flexible integration with both REST and gRPC interfaces for any
-              technology stack.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#00FF88"
+                stroke="currentColor"
                 stroke-width="2"
               >
                 <path
-                  d="M10 13C10.4295 13.5741 10.9774 14.0491 11.6066 14.3929C12.2357 14.7367 12.9315 14.9411 13.6467 14.9923C14.3618 15.0435 15.0796 14.9403 15.7513 14.6897C16.4231 14.4392 17.0331 14.047 17.54 13.54L20.54 10.54C21.4508 9.59695 21.9548 8.33394 21.9434 7.02296C21.932 5.71198 21.4061 4.45791 20.4791 3.53087C19.5521 2.60383 18.298 2.07799 16.987 2.0666C15.676 2.0552 14.413 2.55918 13.47 3.46997L11.75 5.17997"
-                />
-                <path
-                  d="M14 11C13.5705 10.4259 13.0226 9.95083 12.3934 9.60707C11.7642 9.26331 11.0685 9.05889 10.3533 9.00768C9.63819 8.95646 8.92037 9.05965 8.24861 9.31023C7.57685 9.5608 6.96684 9.95303 6.45996 10.46L3.45996 13.46C2.54917 14.403 2.04519 15.666 2.05659 16.977C2.06798 18.288 2.59382 19.5421 3.52086 20.4691C4.44791 21.3961 5.70197 21.922 7.01295 21.9334C8.32393 21.9448 9.58694 21.4408 10.53 20.53L12.24 18.82"
-                />
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
               </svg>
             </div>
-            <h3 class="feature-title">Webhook Notifications</h3>
-            <p class="feature-description">
-              Get real-time notifications when rate limits are reached with
-              configurable webhook callbacks.
-            </p>
+            <h3>TypeScript First</h3>
+            <p>Full type definitions and auto-complete support</p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">
               <svg
-                width="48"
-                height="48"
+                width="32"
+                height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#00FF88"
+                stroke="currentColor"
                 stroke-width="2"
               >
-                <path
-                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                />
-                <path d="M12 6V12L16 14" />
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
               </svg>
             </div>
-            <h3 class="feature-title">Flexible Rules</h3>
-            <p class="feature-description">
-              Create, update, and manage rate limit rules dynamically without
-              service restarts.
-            </p>
+            <h3>Redis-Backed</h3>
+            <p>Distributed rate limiting across multiple instances</p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">
               <svg
-                width="48"
-                height="48"
+                width="32"
+                height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#00FF88"
+                stroke="currentColor"
                 stroke-width="2"
               >
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                <path
+                  d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                ></path>
+                <path
+                  d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                ></path>
               </svg>
             </div>
-            <h3 class="feature-title">Production Ready</h3>
-            <p class="feature-description">
-              Built with TypeScript, comprehensive error handling, and extensive
-              logging for production environments.
-            </p>
+            <h3>Webhook Alerts</h3>
+            <p>Get notified when limits are approached</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3>Production Ready</h3>
+            <p>Battle-tested, error handling, comprehensive logging</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usage Patterns Section -->
+    <section id="usage" class="usage-patterns">
+      <div class="container">
+        <h2 class="section-title">Choose Your Style</h2>
+        <p class="section-subtitle">4 ways to use the same package</p>
+
+        <div class="patterns-grid">
+          <div class="pattern-card">
+            <div class="pattern-number">1</div>
+            <h3>Express Middleware</h3>
+            <p>Most popular choice for Express apps</p>
+            <div class="code-block">
+              <button
+                class="copy-btn"
+                data-copy="import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+
+app.use(createExpressMiddleware({
+  limit: 100,
+  window: 3600,
+}));"
+              >
+                Copy
+              </button>
+              <pre><code>import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+
+app.use(createExpressMiddleware({
+  limit: 100,
+  window: 3600,
+}));</code></pre>
+            </div>
+          </div>
+
+          <div class="pattern-card">
+            <div class="pattern-number">2</div>
+            <h3>Fastify Plugin</h3>
+            <p>Native Fastify integration</p>
+            <div class="code-block">
+              <button
+                class="copy-btn"
+                data-copy="import { createFastifyPlugin } from '@prakarsh/rate-limiter/middleware/fastify';
+
+fastify.register(createFastifyPlugin, {
+  limit: 100,
+  window: 3600,
+});"
+              >
+                Copy
+              </button>
+              <pre><code>import { createFastifyPlugin } from '@prakarsh/rate-limiter/middleware/fastify';
+
+fastify.register(createFastifyPlugin, {
+  limit: 100,
+  window: 3600,
+});</code></pre>
+            </div>
+          </div>
+
+          <div class="pattern-card">
+            <div class="pattern-number">3</div>
+            <h3>Direct Client</h3>
+            <p>For custom implementations</p>
+            <div class="code-block">
+              <button
+                class="copy-btn"
+                data-copy="import { RateLimiterClient } from '@prakarsh/rate-limiter';
+
+const client = new RateLimiterClient('http://localhost:3000');
+const result = await client.check({
+  key: 'user:123',
+  limit: 100,
+  window: 3600,
+});"
+              >
+                Copy
+              </button>
+              <pre><code>import { RateLimiterClient } from '@prakarsh/rate-limiter';
+
+const client = new RateLimiterClient('http://localhost:3000');
+const result = await client.check({
+  key: 'user:123',
+  limit: 100,
+  window: 3600,
+});</code></pre>
+            </div>
+          </div>
+
+          <div class="pattern-card">
+            <div class="pattern-number">4</div>
+            <h3>Standalone CLI</h3>
+            <p>Run as a microservice</p>
+            <div class="code-block">
+              <button
+                class="copy-btn"
+                data-copy="npm install -g @prakarsh/rate-limiter
+rate-limiter"
+              >
+                Copy
+              </button>
+              <pre><code>npm install -g @prakarsh/rate-limiter
+rate-limiter</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples">
+      <div class="container">
+        <h2 class="section-title">Real-World Examples</h2>
+        <p class="section-subtitle">See it in action</p>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="express">Express</button>
+          <button class="tab-btn" data-tab="fastify">Fastify</button>
+          <button class="tab-btn" data-tab="custom">Custom</button>
+          <button class="tab-btn" data-tab="rules">Rules</button>
+        </div>
+
+        <div class="tab-content active" id="express">
+          <h3>Express with Custom Error Handling</h3>
+          <div class="code-block">
+            <button
+              class="copy-btn"
+              data-copy="import express from 'express';
+import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+
+const app = express();
+
+// Apply rate limiting
+app.use(createExpressMiddleware({
+  limit: 100,
+  window: 3600,
+  keyExtractor: (req) => req.user?.id || req.ip,
+  onRateLimitExceeded: (req, res, retryAfter) => {
+    res.status(429).json({
+      error: 'Slow down!',
+      retryAfter,
+      message: 'You have exceeded your rate limit.',
+    });
+  },
+}));
+
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'Success!' });
+});
+
+app.listen(3000);"
+            >
+              Copy
+            </button>
+            <pre><code>import express from 'express';
+import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+
+const app = express();
+
+// Apply rate limiting
+app.use(createExpressMiddleware({
+  limit: 100,
+  window: 3600,
+  keyExtractor: (req) => req.user?.id || req.ip,
+  onRateLimitExceeded: (req, res, retryAfter) => {
+    res.status(429).json({
+      error: 'Slow down!',
+      retryAfter,
+      message: 'You have exceeded your rate limit.',
+    });
+  },
+}));
+
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'Success!' });
+});
+
+app.listen(3000);</code></pre>
+          </div>
+        </div>
+
+        <div class="tab-content" id="fastify">
+          <h3>Fastify with Token Bucket</h3>
+          <div class="code-block">
+            <button
+              class="copy-btn"
+              data-copy="import Fastify from 'fastify';
+import { createFastifyPlugin } from '@prakarsh/rate-limiter/middleware/fastify';
+
+const fastify = Fastify({ logger: true });
+
+fastify.register(createFastifyPlugin, {
+  limit: 1000,
+  window: 3600,
+  algorithm: 'token_bucket',
+  keyExtractor: (req) => req.user?.id || req.ip,
+});
+
+fastify.get('/api/data', async (request, reply) => {
+  return { message: 'Success!' };
+});
+
+fastify.listen({ port: 3000 });"
+            >
+              Copy
+            </button>
+            <pre><code>import Fastify from 'fastify';
+import { createFastifyPlugin } from '@prakarsh/rate-limiter/middleware/fastify';
+
+const fastify = Fastify({ logger: true });
+
+fastify.register(createFastifyPlugin, {
+  limit: 1000,
+  window: 3600,
+  algorithm: 'token_bucket',
+  keyExtractor: (req) => req.user?.id || req.ip,
+});
+
+fastify.get('/api/data', async (request, reply) => {
+  return { message: 'Success!' };
+});
+
+fastify.listen({ port: 3000 });</code></pre>
+          </div>
+        </div>
+
+        <div class="tab-content" id="custom">
+          <h3>Different Limits for Different Routes</h3>
+          <div class="code-block">
+            <button
+              class="copy-btn"
+              data-copy="import express from 'express';
+import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+
+const app = express();
+
+// Strict limit for auth endpoints
+app.use('/api/auth', createExpressMiddleware({
+  limit: 5,
+  window: 300, // 5 requests per 5 minutes
+  keyExtractor: (req) => req.ip,
+}));
+
+// Generous limit for public endpoints
+app.use('/api/public', createExpressMiddleware({
+  limit: 1000,
+  window: 3600, // 1000 requests per hour
+  keyExtractor: (req) => req.ip,
+}));
+
+app.post('/api/auth/login', (req, res) => {
+  res.json({ token: 'example-token' });
+});
+
+app.get('/api/public/info', (req, res) => {
+  res.json({ info: 'Public information' });
+});"
+            >
+              Copy
+            </button>
+            <pre><code>import express from 'express';
+import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+
+const app = express();
+
+// Strict limit for auth endpoints
+app.use('/api/auth', createExpressMiddleware({
+  limit: 5,
+  window: 300, // 5 requests per 5 minutes
+  keyExtractor: (req) => req.ip,
+}));
+
+// Generous limit for public endpoints
+app.use('/api/public', createExpressMiddleware({
+  limit: 1000,
+  window: 3600, // 1000 requests per hour
+  keyExtractor: (req) => req.ip,
+}));
+
+app.post('/api/auth/login', (req, res) => {
+  res.json({ token: 'example-token' });
+});
+
+app.get('/api/public/info', (req, res) => {
+  res.json({ info: 'Public information' });
+});</code></pre>
+          </div>
+        </div>
+
+        <div class="tab-content" id="rules">
+          <h3>Using Reusable Rules</h3>
+          <div class="code-block">
+            <button
+              class="copy-btn"
+              data-copy="import { RateLimiterClient } from '@prakarsh/rate-limiter';
+
+const client = new RateLimiterClient('http://localhost:3000');
+
+// Create a reusable rule
+const rule = await client.createRule({
+  name: 'Premium Users',
+  algorithm: 'token_bucket',
+  limit: 10000,
+  window: 3600,
+  keys: [{ type: 'user', value: '*' }],
+  webhookUrl: 'https://your-app.com/webhooks/rate-limit',
+  thresholds: [80, 90, 100],
+});
+
+// Use the rule
+const result = await client.check({
+  key: 'user:premium-123',
+  ruleId: rule.id,
+});
+
+if (result.allowed) {
+  console.log(`✅ Request allowed! ${result.remaining} remaining`);
+} else {
+  console.log(`❌ Rate limited! Retry after ${result.retryAfter}s`);
+}"
+            >
+              Copy
+            </button>
+            <pre><code>import { RateLimiterClient } from '@prakarsh/rate-limiter';
+
+const client = new RateLimiterClient('http://localhost:3000');
+
+// Create a reusable rule
+const rule = await client.createRule({
+  name: 'Premium Users',
+  algorithm: 'token_bucket',
+  limit: 10000,
+  window: 3600,
+  keys: [{ type: 'user', value: '*' }],
+  webhookUrl: 'https://your-app.com/webhooks/rate-limit',
+  thresholds: [80, 90, 100],
+});
+
+// Use the rule
+const result = await client.check({
+  key: 'user:premium-123',
+  ruleId: rule.id,
+});
+
+if (result.allowed) {
+  console.log(`✅ Request allowed! ${result.remaining} remaining`);
+} else {
+  console.log(`❌ Rate limited! Retry after ${result.retryAfter}s`);
+}</code></pre>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Algorithms Section -->
-    <section id="algorithms" class="algorithms">
+    <section class="algorithms">
       <div class="container">
-        <h2 class="section-title">Rate Limiting Algorithms</h2>
-        <p class="section-subtitle">
-          Choose the right algorithm for your use case
-        </p>
+        <h2 class="section-title">Choose Your Algorithm</h2>
+        <p class="section-subtitle">Different algorithms for different needs</p>
+
         <div class="algorithms-grid">
           <div class="algorithm-card">
-            <h3 class="algorithm-title">Token Bucket</h3>
-            <p class="algorithm-description">
-              Allows bursts of traffic while maintaining an average rate. Tokens
-              are added at a fixed rate, and each request consumes a token.
-            </p>
-            <div class="algorithm-features">
-              <div class="algorithm-feature">✓ Handles traffic bursts</div>
-              <div class="algorithm-feature">✓ Smooth rate control</div>
-              <div class="algorithm-feature">
-                ✓ Best for APIs with variable load
-              </div>
-            </div>
+            <div class="algorithm-icon">🪣</div>
+            <h3>Token Bucket</h3>
+            <p>Allows bursts while maintaining average rate</p>
+            <ul>
+              <li>✓ Handles traffic bursts</li>
+              <li>✓ Smooth rate control</li>
+              <li>✓ Best for APIs with variable load</li>
+            </ul>
+            <code>algorithm: 'token_bucket'</code>
           </div>
+
           <div class="algorithm-card">
-            <h3 class="algorithm-title">Fixed Window</h3>
-            <p class="algorithm-description">
-              Simple counter-based approach with fixed time windows. Resets at
-              the start of each window period.
-            </p>
-            <div class="algorithm-features">
-              <div class="algorithm-feature">✓ Simple implementation</div>
-              <div class="algorithm-feature">✓ Low memory usage</div>
-              <div class="algorithm-feature">✓ Best for strict quotas</div>
-            </div>
+            <div class="algorithm-icon">🪟</div>
+            <h3>Fixed Window</h3>
+            <p>Simple counter-based with fixed time windows</p>
+            <ul>
+              <li>✓ Simple implementation</li>
+              <li>✓ Low memory usage</li>
+              <li>✓ Best for strict quotas</li>
+            </ul>
+            <code>algorithm: 'fixed_window'</code>
           </div>
+
           <div class="algorithm-card">
-            <h3 class="algorithm-title">Sliding Window</h3>
-            <p class="algorithm-description">
-              Combines fixed window and sliding log approaches for more accurate
-              rate limiting without edge case issues.
-            </p>
-            <div class="algorithm-features">
-              <div class="algorithm-feature">✓ Most accurate</div>
-              <div class="algorithm-feature">✓ No edge case spikes</div>
-              <div class="algorithm-feature">✓ Best for consistent limits</div>
-            </div>
+            <div class="algorithm-icon">📊</div>
+            <h3>Sliding Window</h3>
+            <p>Most accurate without edge case issues</p>
+            <ul>
+              <li>✓ Most accurate</li>
+              <li>✓ No edge case spikes</li>
+              <li>✓ Best for consistent limits</li>
+            </ul>
+            <code>algorithm: 'sliding_window'</code>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quick Start Section -->
-    <section id="integration" class="quick-start">
+    <!-- CTA Section -->
+    <section class="cta">
       <div class="container">
-        <h2 class="section-title">Quick Start</h2>
-        <p class="section-subtitle">Get up and running in 5 minutes</p>
-
-        <div class="steps-container">
-          <div class="step">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h3 class="step-title">Install & Configure</h3>
-              <div class="code-block">
-                <button class="copy-btn" data-clipboard-target="code-install">
-                  Copy
-                </button>
-                <pre><code id="code-install"># Clone the repository
-git clone https://github.com/PrakarshSingh5/Rate-limiter-service.git
-cd rate-limiter-service
-
-# Install dependencies
-npm install
-
-# Configure environment
-cp .env.example .env
-# Edit .env with your Redis configuration</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h3 class="step-title">Start the Service</h3>
-              <div class="code-block">
-                <button class="copy-btn" data-clipboard-target="code-start">
-                  Copy
-                </button>
-                <pre><code id="code-start"># Development mode
-npm run dev
-
-# Production mode
-npm run build
-npm start
-
-# Service runs on:
-# REST API: http://localhost:3000
-# gRPC: localhost:50051</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h3 class="step-title">Create a Rate Limit Rule</h3>
-              <div class="code-block">
-                <button class="copy-btn" data-clipboard-target="code-rule">
-                  Copy
-                </button>
-                <pre><code id="code-rule">curl -X POST http://localhost:3000/v1/rules \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "API Rate Limit",
-    "algorithm": "token_bucket",
-    "limit": 100,
-    "window": 60,
-    "keys": [
-      {"type": "user", "value": "*"}
-    ]
-  }'</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">4</div>
-            <div class="step-content">
-              <h3 class="step-title">Check Rate Limit</h3>
-              <div class="code-block">
-                <button class="copy-btn" data-clipboard-target="code-check">
-                  Copy
-                </button>
-                <pre><code id="code-check">curl -X POST http://localhost:3000/v1/check \
-  -H "Content-Type: application/json" \
-  -d '{
-    "key": "user:123",
-    "endpoint": "/api/data"
-  }'
-
-# Response:
-{
-  "allowed": true,
-  "limit": 100,
-  "remaining": 99,
-  "resetAt": "2024-01-11T03:00:00Z"
-}</code></pre>
-              </div>
-            </div>
-          </div>
+        <h2>Ready to Get Started?</h2>
+        <p>Install the package and start rate limiting in 30 seconds</p>
+        <div class="cta-install">
+          <code>npm install @prakarsh/rate-limiter</code>
+          <button
+            class="copy-btn-cta"
+            data-copy="npm install @prakarsh/rate-limiter"
+          >
+            Copy
+          </button>
+        </div>
+        <div class="cta-buttons">
+          <a
+            href="https://www.npmjs.com/package/@prakarsh/rate-limiter"
+            class="btn-primary"
+            target="_blank"
+          >
+            View on NPM
+          </a>
+          <a
+            href="https://github.com/PrakarshSingh5/rate-limiter-service"
+            class="btn-secondary"
+            target="_blank"
+          >
+            View on GitHub
+          </a>
         </div>
       </div>
     </section>
-
-    <!-- Integration Examples Section -->
-    <section class="integration-examples">
-      <div class="container">
-        <h2 class="section-title">Integration Examples</h2>
-        <p class="section-subtitle">Easy integration with any tech stack</p>
-
-        <div class="tabs">
-          <button class="tab-btn active" data-tab="nodejs">Node.js</button>
-          <button class="tab-btn" data-tab="python">Python</button>
-          <button class="tab-btn" data-tab="go">Go</button>
-          <button class="tab-btn" data-tab="java">Java</button>
-        </div>
-
-        <div class="tab-content active" id="nodejs">
-          <h3>Express.js Middleware</h3>
-          <div class="code-block">
-            <button class="copy-btn" data-clipboard-target="code-nodejs">
-              Copy
-            </button>
-            <pre><code id="code-nodejs">const axios = require('axios');
-
-// Rate limiter middleware
-async function rateLimiter(req, res, next) {
-  try {
-    const response = await axios.post('http://localhost:3000/v1/check', {
-      key: `user:${req.user.id}`,
-      endpoint: req.path
-    });
-
-    // Set rate limit headers
-    res.set('X-RateLimit-Limit', response.data.limit);
-    res.set('X-RateLimit-Remaining', response.data.remaining);
-    res.set('X-RateLimit-Reset', response.data.resetAt);
-
-    if (!response.data.allowed) {
-      return res.status(429).json({
-        error: 'Rate limit exceeded',
-        retryAfter: response.data.retryAfter
-      });
-    }
-
-    next();
-  } catch (error) {
-    console.error('Rate limiter error:', error);
-    next(); // Fail open
-  }
-}
-
-// Apply to routes
-app.use('/api', rateLimiter);
-
-app.get('/api/data', (req, res) => {
-  res.json({ message: 'Success!' });
-});</code></pre>
-          </div>
-        </div>
-
-        <div class="tab-content" id="python">
-          <h3>Flask Decorator</h3>
-          <div class="code-block">
-            <button class="copy-btn" data-clipboard-target="code-python">
-              Copy
-            </button>
-            <pre><code id="code-python">import requests
-from functools import wraps
-from flask import request, jsonify
-
-RATE_LIMITER_URL = 'http://localhost:3000/v1/check'
-
-def rate_limit(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        user_id = request.headers.get('X-User-ID', 'anonymous')
-        
-        response = requests.post(RATE_LIMITER_URL, json={
-            'key': f'user:{user_id}',
-            'endpoint': request.path
-        })
-        
-        data = response.json()
-        
-        if not data.get('allowed'):
-            return jsonify({
-                'error': 'Rate limit exceeded',
-                'retryAfter': data.get('retryAfter')
-            }), 429
-        
-        return f(*args, **kwargs)
-    
-    return decorated_function
-
-@app.route('/api/data')
-@rate_limit
-def get_data():
-    return jsonify({'message': 'Success!'})</code></pre>
-          </div>
-        </div>
-
-        <div class="tab-content" id="go">
-          <h3>Go HTTP Middleware</h3>
-          <div class="code-block">
-            <button class="copy-btn" data-clipboard-target="code-go">
-              Copy
-            </button>
-            <pre><code id="code-go">package main
-
-import (
-    "bytes"
-    "encoding/json"
-    "net/http"
-)
-
-type CheckRequest struct {
-    Key      string `json:"key"`
-    Endpoint string `json:"endpoint"`
-}
-
-type CheckResponse struct {
-    Allowed   bool   `json:"allowed"`
-    Limit     int    `json:"limit"`
-    Remaining int    `json:"remaining"`
-    ResetAt   string `json:"resetAt"`
-}
-
-func RateLimiterMiddleware(next http.Handler) http.Handler {
-    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-        userID := r.Header.Get("X-User-ID")
-        
-        checkReq := CheckRequest{
-            Key:      "user:" + userID,
-            Endpoint: r.URL.Path,
-        }
-        
-        jsonData, _ := json.Marshal(checkReq)
-        resp, err := http.Post(
-            "http://localhost:3000/v1/check",
-            "application/json",
-            bytes.NewBuffer(jsonData),
-        )
-        
-        if err != nil {
-            // Fail open
-            next.ServeHTTP(w, r)
-            return
-        }
-        defer resp.Body.Close()
-        
-        var checkResp CheckResponse
-        json.NewDecoder(resp.Body).Decode(&checkResp)
-        
-        if !checkResp.Allowed {
-            w.WriteHeader(http.StatusTooManyRequests)
-            json.NewEncoder(w).Encode(map[string]string{
-                "error": "Rate limit exceeded",
-            })
-            return
-        }
-        
-        next.ServeHTTP(w, r)
-    })
-}</code></pre>
-          </div>
-        </div>
-
-        <div class="tab-content" id="java">
-          <h3>Spring Boot Interceptor</h3>
-          <div class="code-block">
-            <button class="copy-btn" data-clipboard-target="code-java">
-              Copy
-            </button>
-            <pre><code id="code-java">import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.client.RestTemplate;
-
-public class RateLimiterInterceptor implements HandlerInterceptor {
-    
-    private final RestTemplate restTemplate = new RestTemplate();
-    private static final String RATE_LIMITER_URL = 
-        "http://localhost:3000/v1/check";
-    
-    @Override
-    public boolean preHandle(HttpServletRequest request, 
-                            HttpServletResponse response, 
-                            Object handler) throws Exception {
-        
-        String userId = request.getHeader("X-User-ID");
-        
-        CheckRequest checkRequest = new CheckRequest();
-        checkRequest.setKey("user:" + userId);
-        checkRequest.setEndpoint(request.getRequestURI());
-        
-        CheckResponse checkResponse = restTemplate.postForObject(
-            RATE_LIMITER_URL, 
-            checkRequest, 
-            CheckResponse.class
-        );
-        
-        if (checkResponse != null && !checkResponse.isAllowed()) {
-            response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value());
-            response.getWriter().write(
-                "{\"error\":\"Rate limit exceeded\"}"
-            );
-            return false;
-        }
-        
-        return true;
-    }
-}</code></pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- API Reference Section Removed (Moved to docs/api-reference.html) -->
 
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h4>Rate Limiter Service</h4>
+            <h4>@prakarsh/rate-limiter</h4>
             <p>Production-ready API rate limiting for modern applications.</p>
+            <div class="footer-badges">
+              <span class="badge">MIT License</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">Open Source</span>
+            </div>
           </div>
           <div class="footer-section">
-            <h4>Documentation</h4>
-            <ul>
-              <li><a href="docs/getting-started.html">Getting Started</a></li>
-              <li><a href="docs/integration.html">Integration Guide</a></li>
-              <li><a href="docs/api-reference.html">API Reference</a></li>
-              <li><a href="docs/configuration.html">Configuration</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Resources</h4>
+            <h4>Package</h4>
             <ul>
               <li>
-                <a href="https://github.com/PrakarshSingh5/Rate-limiter-service"
+                <a
+                  href="https://www.npmjs.com/package/@prakarsh/rate-limiter"
+                  target="_blank"
+                  >NPM</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/PrakarshSingh5/rate-limiter-service"
+                  target="_blank"
                   >GitHub</a
                 >
               </li>
               <li>
                 <a
-                  href="https://github.com/PrakarshSingh5/Rate-limiter-service/issues"
+                  href="https://github.com/PrakarshSingh5/rate-limiter-service/issues"
+                  target="_blank"
                   >Issues</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/PrakarshSingh5/Rate-limiter-service/blob/main/LICENSE"
-                  >License</a
                 >
               </li>
             </ul>
           </div>
           <div class="footer-section">
-            <h4>Community</h4>
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#install">Installation</a></li>
+              <li><a href="#usage">Usage</a></li>
+              <li><a href="#examples">Examples</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
             <ul>
               <li>
-                <a
-                  href="https://github.com/PrakarshSingh5/Rate-limiter-service/discussions"
-                  >Discussions</a
+                <a href="https://github.com/PrakarshSingh5" target="_blank"
+                  >GitHub Profile</a
                 >
               </li>
               <li>
                 <a
-                  href="https://github.com/PrakarshSingh5/Rate-limiter-service/blob/main/CONTRIBUTING.md"
-                  >Contributing</a
+                  href="https://www.linkedin.com/in/prakarsh-singh"
+                  target="_blank"
+                  >LinkedIn</a
                 >
               </li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>
-            &copy; 2024 Rate Limiter Service. Released under the MIT License.
-          </p>
+          <p>&copy; 2026 Prakarsh Singh. Released under the MIT License.</p>
         </div>
       </div>
     </footer>
