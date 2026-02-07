@@ -1,5 +1,5 @@
 {
-  "name": "@prakarsh/rate-limiter",
+  "name": "@prakarsh123/rate-limiter",
   "version": "1.0.0",
   "description": "Production-ready API Rate Limiting & Quota Management - Use as a library or standalone service",
   "main": "dist/lib/index.js",
@@ -89,7 +89,7 @@
     "zod": "^3.22.4"
   },
   "peerDependencies": {
-    "express": "^4.0.0 || ^5.0.0"
+    "express": "^5.2.1"
   },
   "peerDependenciesMeta": {
     "express": {

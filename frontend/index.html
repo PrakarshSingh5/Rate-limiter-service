@@ -87,7 +87,10 @@
             <span class="gradient-text">3 Lines of Code</span>
           </h1>
           <p class="hero-subtitle">
-            Protect your APIs with intelligent rate limiting. <strong>Token Bucket</strong>, <strong>Sliding Window</strong>, and <strong>Fixed Window</strong> algorithms—all in one powerful npm package. Redis-backed, distributed, and production-ready.
+            Protect your APIs with intelligent rate limiting.
+            <strong>Token Bucket</strong>, <strong>Sliding Window</strong>, and
+            <strong>Fixed Window</strong> algorithms—all in one powerful npm
+            package. Redis-backed, distributed, and production-ready.
           </p>
 
           <div class="hero-install">
@@ -228,23 +231,35 @@
               <div class="code-block">
                 <button
                   class="copy-btn"
-                  data-copy="import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+                  data-copy="import pkg from '@prakarsh/rate-limiter';
+const { TokenBucketLimiter, getStorage } = pkg;
 
-app.use(createExpressMiddleware({
-  limit: 100,
-  window: 3600,
-  keyExtractor: (req) => req.user?.id || req.ip,
-}));"
+const storage = getStorage();
+const limiter = new TokenBucketLimiter(storage);
+
+app.use(async (req, res, next) => {
+  const result = await limiter.check(req.ip, 100, 3600);
+  if (!result.allowed) {
+    return res.status(429).json({ error: 'Too many requests' });
+  }
+  next();
+});"
                 >
                   Copy
                 </button>
-                <pre><code>import { createExpressMiddleware } from '@prakarsh/rate-limiter/middleware/express';
+                <pre><code>import pkg from '@prakarsh/rate-limiter';
+const { TokenBucketLimiter, getStorage } = pkg;
 
-app.use(createExpressMiddleware({
-  limit: 100,
-  window: 3600,
-  keyExtractor: (req) => req.user?.id || req.ip,
-}));</code></pre>
+const storage = getStorage();
+const limiter = new TokenBucketLimiter(storage);
+
+app.use(async (req, res, next) => {
+  const result = await limiter.check(req.ip, 100, 3600);
+  if (!result.allowed) {
+    return res.status(429).json({ error: 'Too many requests' });
+  }
+  next();
+});</code></pre>
               </div>
             </div>
           </div>
